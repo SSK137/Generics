@@ -1,6 +1,6 @@
 public class Generics {
- public int maxOfValues(int a1,int a2,int a3) {
-        int max = a1;
+ public float maxOfValues(float a1, float a2,float a3) {
+        float max = a1;
         if (a2 > max)
             max = a2;
         if (a3 > max)
@@ -12,6 +12,6 @@ public class Generics {
         Generics generics=new Generics();
         Generics gns=new Generics();
         System.out.println("\nWelcome To Find Maximum Value Problem Using Generics \n");
-        System.out.println("The maximum value between the three Number is : " +generics.maxOfValues(8, 9, 5));
+        System.out.println("The maximum value between the three Number is : " +generics.maxOfValues(1.5f,2.35f,5.36f));
     }
 }
