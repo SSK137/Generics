@@ -1,6 +1,7 @@
+import java.lang.*;
 public class Generics {
- public String maxOfValues(String  str1, String str2,String str3) {
-        String max = str1;
+ public static <T extends Comparable<T>> T maxOfValues(T str1,T str2,T str3) {
+        T max = str1;
         if (str1.compareTo(max) > 0)
             max = str2;
         if (str3.compareTo(max) > 0)
@@ -10,8 +11,9 @@ public class Generics {
 
     public static void main(String[] args) {
         Generics generics=new Generics();
-        Generics gns=new Generics();
         System.out.println("\nWelcome To Find Maximum Value Problem Using Generics \n");
         System.out.println("The maximum value between the three Number is : " +generics.maxOfValues("SSK","ABC","DSA"));
+        System.out.println("The maximum value between the three Number is : " +generics.maxOfValues(3,7,8));
+        System.out.println("The maximum value between the three Number is : " +generics.maxOfValues(1.35f,2.67f,3.35f));
     }
 }
